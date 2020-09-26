@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.TextView;
 
 public class Actividad4 extends AppCompatActivity {
 
@@ -27,5 +28,8 @@ public class Actividad4 extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        String msn= this.getIntent().getExtras().getString("msn");
+        TextView txt= findViewById(R.id.txt);
+        txt.setText(msn);
     }
 }
